@@ -39,6 +39,13 @@
     <button onclick="multiplicar()">Multiplicar</button>
     <button onclick="dividir()">Dividir</button>
 
+
+    <div id="cajaPedro" class="cajapedro"></div>
+
+    <input id="micolor" type="color">
+    <button onclick="aplicarColor()">Aplicar color</button>
+
+
     <script type="text/javascript">
         // Ejericio 1
         // document.getElementById("elemento1").innerHTML = "Escribo algo";
@@ -133,6 +140,11 @@
             document.getElementById("resultado").innerHTML = "Resultado: " + resultado
         }
 
+        //  Input de color
+        function aplicarColor() {
+            let colorUsuario = document.getElementById("micolor").value;
+            document.getElementById("cajaPedro").style.backgroundColor = colorUsuario
+        }
     </script>
 
 </body>
