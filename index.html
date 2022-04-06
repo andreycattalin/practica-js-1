@@ -22,6 +22,7 @@
     <button onclick="cambiarMiImagen()">Cambiar imagen</button>
 
     <div id="caja1" class="caja rojo"></div>
+    <br>
     <div id="caja2" class="caja azul"></div>
 
     <button onclick="cambiarClase()">Cambiar colores</button>
@@ -79,13 +80,23 @@
         // Ejercicio 4
         function cambiarClase() {
 
-            // forma 1
-            document.getElementById("caja1").classList = "caja azul";
+            let claseActual = document.getElementById("caja1").classList;
+            if (claseActual == "caja rojo") {
+                document.getElementById("caja1").classList = "caja azul";
+            } else {
+                document.getElementById("caja1").classList = "caja rojo";
+            }
 
             // forma 2
             let caja2 = document.getElementById("caja2");
-            caja2.classList.remove('azul');
-            caja2.classList.add('rojo');
+
+            if (caja2.classList == "caja rojo") {
+                caja2.classList.remove('rojo');
+                caja2.classList.add('azul');
+            } else {
+                caja2.classList.remove('azul');
+                caja2.classList.add('rojo');
+            }
 
         }
 
