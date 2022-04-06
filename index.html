@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="elemento1">Hola</h1>
+    <p id="elemento2">Adios</p>
+
+    <button onclick="cambiarMiTexto()">Cambiar ahora</button>
+
+
+    <img id="img-principal" src="ktal.png" alt="">
+    <button onclick="cambiarMiImagen()">Cambiar imagen</button>
+
+    <div id="caja1" class="caja rojo"></div>
+    <div id="caja2" class="caja azul"></div>
+
+    <button onclick="cambiarClase()">Cambiar colores</button>
+
+    <script type="text/javascript">
+        // Ejericio 1
+        document.getElementById("elemento1").innerHTML = "Escribo algo";
+        document.getElementById("elemento2").innerHTML = "Escribo otra cosa";
+
+        // EJericio 2
+        function cambiarMiTexto() {
+            document.getElementById("elemento1").innerHTML = "Cuando pulso he cambiado";
+            document.getElementById("elemento2").innerHTML = "Cuando pulso Escribo otra cosa";
+        }
+
+        // Ejericio 3
+        function cambiarMiImagen() {
+            document.getElementById("img-principal").src = "persona.jpg"
+        }
+
+        // Ejercicio 4
+        function cambiarClase() {
+
+            // forma 1
+            document.getElementById("caja1").classList = "caja azul";
+
+            // forma 2
+            let caja2 = document.getElementById("caja2");
+            caja2.classList.remove('azul');
+            caja2.classList.add('rojo');
+
+        }
+
+    </script>
+
+</body>
+
+</html>
