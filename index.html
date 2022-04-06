@@ -16,6 +16,7 @@
 
     <button onclick="cambiarMiTexto()">Cambiar ahora</button>
 
+    <br>
 
     <img id="img-principal" src="ktal.png" alt="">
     <button onclick="cambiarMiImagen()">Cambiar imagen</button>
@@ -39,18 +40,40 @@
 
     <script type="text/javascript">
         // Ejericio 1
-        document.getElementById("elemento1").innerHTML = "Escribo algo";
-        document.getElementById("elemento2").innerHTML = "Escribo otra cosa";
+        // document.getElementById("elemento1").innerHTML = "Escribo algo";
+        // document.getElementById("elemento2").innerHTML = "Escribo otra cosa";
 
         // EJericio 2
         function cambiarMiTexto() {
-            document.getElementById("elemento1").innerHTML = "Cuando pulso he cambiado";
-            document.getElementById("elemento2").innerHTML = "Cuando pulso Escribo otra cosa";
+            let texto1 = "Cuando pulso he cambiado";
+            let texto2 = "Cuando pulso Escribo otra cosa";
+
+            let texto1Normal = "Hola";
+            let texto2Normal = "Adios";
+
+            let textoActual = document.getElementById("elemento1").innerHTML;
+
+            if (textoActual == texto1) {
+                document.getElementById("elemento1").innerHTML = texto1Normal;
+                document.getElementById("elemento2").innerHTML = texto2Normal;
+            } else {
+                document.getElementById("elemento1").innerHTML = texto1;
+                document.getElementById("elemento2").innerHTML = texto2;
+            }
         }
 
         // Ejericio 3
         function cambiarMiImagen() {
-            document.getElementById("img-principal").src = "persona.jpg"
+            let img1 = "ktal.png";
+            let img2 = "persona.jpg";
+
+            let imagenActual = document.getElementById("img-principal").src;
+
+            if (imagenActual.includes(img1)) {
+                document.getElementById("img-principal").src = img2
+            } else {
+                document.getElementById("img-principal").src = img1
+            }
         }
 
         // Ejercicio 4
